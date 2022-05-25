@@ -25,7 +25,7 @@ else:
         def get_tag(self):
             abi = 'none'
             if system == 'Darwin':
-                oses = 'macosx_10_6_x86_64'
+                oses = 'macosx_10_6_universal'
             elif system == 'Windows' and architecture == '32bit':
                 oses = 'win32'
             elif system == 'Windows' and architecture == '64bit':
@@ -44,7 +44,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="vosk",
-    version="0.3.37",
+    version="0.3.38",
     author="Alpha Cephei Inc",
     author_email="contact@alphacephei.com",
     description="Offline open source speech recognition API based on Kaldi and Vosk",
@@ -54,7 +54,7 @@ setuptools.setup(
     packages=setuptools.find_packages(),
     package_data = {'vosk': ['*.so', '*.dll', '*.dyld']},
     entry_points = {
-        'console_scripts': ['vosk-transcriber=vosk.transcriber.cli:cli'],
+        'console_scripts': ['vosk-transcriber=vosk.transcriber.cli:main'],
     },
     include_package_data=True,
     classifiers=[
