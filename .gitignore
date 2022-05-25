@@ -48,8 +48,8 @@ java/demo/build
 
 # CSharp
 *.dll
-*.so
-*.dylib
+#*.so
+#*.dylib
 *.nupkg
 csharp/demo/model
 csharp/demo/test.wav
